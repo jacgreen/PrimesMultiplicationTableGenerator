@@ -11,4 +11,24 @@ class PrimesHelper
       return 11
     end
   end
+
+  # according to various places on the intertubes, a simple and relatively efficient way to
+  # find primes is the
+  def find_n_primes(in_number_of_primes_to_find)
+
+    upper_bound = self.find_primes_upper_bound(in_number_of_primes_to_find)
+
+    primes = []
+    for i in 2 .. upper_bound
+      primes[i] = i
+    end
+
+    for i in 2 .. Math.sqrt(upper_bound)
+      next unless primes[i]
+      (i*i).step(upper_bound, i) do |j|
+        primes[j] = nil
+      end
+    end
+    primes.compact.slice(0, in_number_of_primes_to_find)
+  end
 end
