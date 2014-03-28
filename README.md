@@ -1,6 +1,6 @@
 # PrimesMultiplicationTableGenerator
 
-TODO: Write a gem description
+Small gem written as part of an application for a Ruby Dev gig.
 
 ## Installation
 
