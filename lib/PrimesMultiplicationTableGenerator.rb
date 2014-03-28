@@ -1,6 +1,3 @@
 require 'PrimesMultiplicationTableGenerator/version'
-require 'PrimesMultiplicationTableGenerator/primes_helper.rb'
-require 'PrimesMultiplicationTableGenerator/table_generator.rb'
-
-module PrimesMultiplicationTableGenerator
-end
+require 'PrimesMultiplicationTableGenerator/primes_helper'
+require 'PrimesMultiplicationTableGenerator/table_generator'
