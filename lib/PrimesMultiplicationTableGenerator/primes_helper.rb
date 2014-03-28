@@ -1,0 +1,2 @@
+class PrimesHelper
+end
