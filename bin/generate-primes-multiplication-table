@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+#lib = File.expand_path('../lib', __FILE__)
+#$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'PrimesMultiplicationTableGenerator'
+
+options = {}
+
+opt_parse = OptionParser.new do|opts|
+  opts.banner = "Usage: generate-primes-multiplication-table [options]..."
+
+    options[:number_of_primes] = 5
+    opts.on( '-n', '--numberofprimes N', Integer, 'The number of prime numbers to include in the table, default is 5' ) do |number_of_primes|
+        options[:number_of_primes] = number_of_primes
+    end
+
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+
+end
+
+opt_parse.parse!
+
+primes_helper = PrimesHelper.new()
+primes_array = primes_helper.find_n_primes(options[:number_of_primes])
+TableGenerator.dump_table(primes_array)
+
