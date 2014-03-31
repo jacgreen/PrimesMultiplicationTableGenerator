@@ -29,7 +29,7 @@ module TableGenerator
     line
   end
 
-  def self.set_table_field_width(in_array_of_numbers)
+  def self.prepare_table_field_width(in_array_of_numbers)
     @field_width = (in_array_of_numbers.last**2).to_s.length + 2
     @format_string = "%#{@field_width}i"
   end
