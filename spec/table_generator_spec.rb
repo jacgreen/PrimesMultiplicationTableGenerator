@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TableGenerator do
+describe PrimesMultiplicationTableGenerator::TableGenerator do
 
   before do
     described_class.prepare_table_field_width(array_of_numbers: [1,10])

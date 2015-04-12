@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PrimesHelper do
+describe PrimesMultiplicationTableGenerator::PrimesHelper do
   describe '#find_upper_bound' do
     it 'should return the integer upper bound given the desired number of primes' do
       expect(subject.find_primes_upper_bound(number_of_primes: 5)).to eq(11)
