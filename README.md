@@ -16,6 +16,10 @@ Or install it yourself as:
 
     $ gem install PrimesMultiplicationTableGenerator
 
+Please note that internally the code uses 'Required Keyword Arguments' which are a
+Ruby 2.1.x feature, this is noted in the gemspec, but you might need to create an
+RVM environment with that version or greater to get this to run.
+
 ## Usage
 
 Assuming that you've installed this as a gem, you should be able to:
