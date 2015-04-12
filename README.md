@@ -20,7 +20,7 @@ Or install it yourself as:
 
 Assuming that you've installed this as a gem, you should be able to:
 
-    $ generate-primes-multiplication-table
+    $ bin/generate-primes-multiplication-table
 
 This will dump out a default table of 10 primes, using a 'lower level' rake task.
 
