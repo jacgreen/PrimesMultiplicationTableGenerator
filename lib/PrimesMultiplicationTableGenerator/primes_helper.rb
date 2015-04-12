@@ -3,9 +3,9 @@ class PrimesHelper
   # a default method to find the upper bound for a set of prime numbers.
   # subclasses may prefer to provide their own implementation.  again, this
   # method is derived from googled info, i didn't come up with this myself.
-  def find_primes_upper_bound(in_number_of_primes)
-    if in_number_of_primes > 5
-      return (in_number_of_primes*Math.log(in_number_of_primes) + in_number_of_primes*Math.log( Math.log(in_number_of_primes) )).floor
+  def find_primes_upper_bound(number_of_primes:)
+    if number_of_primes > 5
+      return (number_of_primes*Math.log(number_of_primes) + number_of_primes*Math.log( Math.log(number_of_primes) )).floor
     else
       # 11 is the 5th prime, no matter what number we're given, if it's
       # less than 5, we're never gonna have an upper bound greater than 11.
@@ -21,9 +21,9 @@ class PrimesHelper
   # largest number in the array (as the higher values have all already been marked or
   # are prime.)  once you stop iterating, any values that remain non-null are prime.
   # time complexity here is  O(n(log(log(n))), which is not terrible.
-  def find_n_primes(in_number_of_primes_to_find)
+  def find_n_primes(number_of_primes:)
 
-    upper_bound = self.find_primes_upper_bound(in_number_of_primes_to_find)
+    upper_bound = self.find_primes_upper_bound(number_of_primes: number_of_primes)
 
     primes = []
     for i in 2 .. upper_bound
@@ -36,6 +36,6 @@ class PrimesHelper
         primes[j] = nil
       end
     end
-    primes.compact.slice(0, in_number_of_primes_to_find)
+    primes.compact.slice(0, number_of_primes)
   end
 end
