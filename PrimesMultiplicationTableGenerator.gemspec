@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Simple gem to produce a multiplication table for the first N primes.}
   spec.description   = %q{Given a command line that specifies the number of primes to include (-n), produces a multiplication table for those primes.}
   spec.homepage      = ""
+  spec.required_ruby_version = '~> 2.1'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
