@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = PrimesMultiplicationTableGenerator::VERSION
   spec.authors       = ["Jack Green"]
   spec.email         = ["jgreen@gmail.com"]
-  spec.summary       = %q{Simple method to produce a multiplication table for the first N primes.}
+  spec.summary       = %q{Simple gem to produce a multiplication table for the first N primes.}
   spec.description   = %q{Given a command line that specifies the number of primes to include (-n), produces a multiplication table for those primes.}
   spec.homepage      = ""
 
@@ -18,6 +18,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_dependency "rspec"
+  spec.add_development_dependency "rspec"
+  spec.add_dependency "rake"
 end
