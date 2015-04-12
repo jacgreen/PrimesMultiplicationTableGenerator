@@ -20,20 +20,17 @@ Or install it yourself as:
 
 Assuming that you've installed this as a gem, you should be able to:
 
-# generate-primes-multiplication-table -h
+    $ generate-primes-multiplication-table
 
-To get to the command line help.  To specify the number of primes to include in the table, use the -n command line
-option.
+This will dump out a default table of 10 primes, using a 'lower level' rake task.
 
-# generate-primes-multiplication-table -n 10
+If you'd like dump out a table for an arbitrary number of primes, you can use the
+rake task directly:
 
-Will give you a multiplication table for the first 10 primes.
+    $ rake coding_exercises:generate_primes_multiplication_table[15]
 
-If you don't want to install it as a gem but still want to see it run, you can:
-
-# ruby -I./lib bin/generate-primes-multiplication-table -n 10
-
-from within the main project director.
+See the code for details on how the prime numbers are found (PrimesHelper) and how the
+table is generated (TableGenerator).  Basic specs are also provoded.
 
 ## Contributing
 
